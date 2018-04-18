@@ -16,20 +16,25 @@ public class Table {
 	
 	public void AddPlayerToTable(Player p)
 	{
-		//TODO: Implement this method
+		hmTablePlayers.put( p.getPlayerID(), p );
 	}
 	public void RemovePlayerFromTable(Player p)
 	{
-		//TODO: Implement this method		
+		if ( hmTablePlayers.containsKey( p.getPlayerID() ) ) {
+			hmTablePlayers.remove( p.getPlayerID() );
+		}
 	}
 	
 	public Player GetPlayerFromTable(Player p)
 	{
-		//TODO: Implement this method	
-		return null;
+		if ( hmTablePlayers.containsKey( p.getPlayerID() ) ) { 
+			return hmTablePlayers.get(  p.getPlayerID()  );
+		} else {
+			return null;
+		}
 	}
 	public void ClearTable()
 	{
-		//TODO: Implement this method	
+		hmTablePlayers.clear();
 	}
 }
