@@ -2,6 +2,7 @@ package pkgCore;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.UUID;
 
 public class Table {
@@ -33,6 +34,11 @@ public class Table {
 			return null;
 		}
 	}
+	
+	public HashMap<UUID, Player> getAllPlayers() {
+		return hmTablePlayers;
+	}
+	
 	public void ClearTable()
 	{
 		hmTablePlayers.clear();

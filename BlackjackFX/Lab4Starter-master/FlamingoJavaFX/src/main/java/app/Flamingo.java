@@ -14,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import netgame.common.Client;
+import pkgCore.Action;
 import pkgCore.GamePlay;
 import pkgCore.Player;
 import pkgCore.Table;
@@ -32,6 +33,10 @@ public class Flamingo extends Application {
 	public static void main(String[] args) {
 		launch(args);
 
+	}
+	
+	public Player getAppPlayer() {
+		return appPlayer;
 	}
 
 	@Override
@@ -197,6 +202,10 @@ public class Flamingo extends Application {
 	    }
 	
 
+	}
+
+	public void SendMessageToClient( Action act ) {
+		
 	}
 
 }

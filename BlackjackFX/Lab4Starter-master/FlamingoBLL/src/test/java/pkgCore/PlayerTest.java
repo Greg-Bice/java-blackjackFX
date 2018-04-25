@@ -23,7 +23,6 @@ public class PlayerTest {
 		
 		assertNull( table.GetPlayerFromTable( p2 ) );
 		
-		
 	}
 	
 }
