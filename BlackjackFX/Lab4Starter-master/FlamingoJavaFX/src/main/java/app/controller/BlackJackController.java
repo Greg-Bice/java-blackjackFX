@@ -58,28 +58,43 @@ public class BlackJackController implements Initializable {
 			switch( pl.getiPlayerPosition() ) {
 				
 				case 0:
+					
 					if ( pl.getPlayerID() == FlamingoGame.getAppPlayer().getPlayerID() ) {
 						btnBottom.setVisible( true );
-						lblBottom.setText( pl.getPlayerName() );
 						btnBottom.setText( "Leave" );
 						btnTop.setVisible( false );
+					} else {
+						btnBottom.setVisible( false );
+						btnBottom.setText( "Sit" );
+						btnTop.setVisible( true );
 					}
+					
+					lblBottom.setText( pl.getPlayerName() );
+					
 					break;
 					
 				case 2:
 					if ( pl.getPlayerID() == FlamingoGame.getAppPlayer().getPlayerID() ) {
 						btnTop.setVisible( true  );
-						lblTop.setText( pl.getPlayerName() );
 						btnTop.setText( "Leave" );
 						btnBottom.setVisible( false );
+					} else {
+						btnTop.setVisible(  false  );
+						btnTop.setText(  "Sit" );
+						btnBottom.setVisible(  true );
 					}
+					
+					lblTop.setText( pl.getPlayerName() );
+					
 					break;
 					
 				default:
 					btnTop.setVisible( true );
 					btnBottom.setVisible( true );
-					lblTop.setText( "Sit" );
-					lblBottom.setText( "Sit" );
+					btnTop.setText( "Sit" );
+					btnBottom.setText( "Sit" );
+					lblTop.setText( "Waiting for player..." );
+					lblBottom.setText(  "Waiting for player..." );
 					break;
 			}
 			

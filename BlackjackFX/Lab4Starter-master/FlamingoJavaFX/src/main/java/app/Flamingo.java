@@ -205,7 +205,7 @@ public class Flamingo extends Application {
 	}
 
 	public void SendMessageToClient( Action act ) {
-		
+		gClient.messageSend( act );
 	}
 
 }
